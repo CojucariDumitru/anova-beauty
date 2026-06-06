@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, rmSync } from "fs";
+import { cpSync, existsSync, rmSync } from "fs";
 import { spawnSync } from "child_process";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -28,13 +28,9 @@ try {
   }
 
   run("npm", ["run", "build"], {
-    GITHUB_PAGES: "true",
-    NEXT_PUBLIC_BASE_PATH: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
+    STATIC_EXPORT: "true",
   });
 
-  const outDir = path.join(root, "out");
-  mkdirSync(outDir, { recursive: true });
-  cpSync(path.join(root, "public", ".nojekyll"), path.join(outDir, ".nojekyll"));
 } finally {
   if (existsSync(apiBackup)) {
     rmSync(apiDir, { recursive: true, force: true });

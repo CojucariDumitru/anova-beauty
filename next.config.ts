@@ -1,19 +1,16 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const isPagesExport = process.env.GITHUB_PAGES === "true";
+const isStaticExport = process.env.STATIC_EXPORT === "true";
 
 const nextConfig: NextConfig = {
-  ...(isPagesExport
+  ...(isStaticExport
     ? {
         output: "export",
-        basePath,
-        assetPrefix: basePath ? `${basePath}/` : undefined,
         trailingSlash: true,
       }
     : {}),
   images: {
-    unoptimized: isPagesExport,
+    unoptimized: isStaticExport,
     remotePatterns: [
       {
         protocol: "https",

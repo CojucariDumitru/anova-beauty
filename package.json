@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:pages": "node scripts/build-pages.mjs",
+    "build:cloudflare": "node scripts/build-static.mjs",
+    "deploy": "npm run build:cloudflare && wrangler pages deploy out --project-name=anova-beauty",
     "start": "next start",
     "lint": "eslint",
     "seed": "node scripts/generate-products.mjs"
@@ -25,6 +26,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.14.0"
   }
 }
