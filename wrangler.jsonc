@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "anova-beauty",
+  "account_id": "b33a503b9ced0c5d7183835d19eb6cdd",
   "compatibility_date": "2026-06-01",
   "pages_build_output_dir": "./out"
 }
