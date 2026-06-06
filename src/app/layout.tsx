@@ -10,6 +10,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://anova-beauty.pages.dev",
+  ),
   title: "ANOVA Beauty — Professional Nail Polish",
   description:
     "ANOVA Beauty — salon-quality nail polishes from Luna, Edlen, Heylove & Sova.",

@@ -30,8 +30,6 @@ const LEGAL_LINKS = [
 const SOCIAL = [
   { label: "Instagram", href: "https://instagram.com" },
   { label: "Facebook", href: "https://facebook.com" },
-  { label: "Pinterest", href: "https://pinterest.com" },
-  { label: "YouTube", href: "https://youtube.com" },
   { label: "TikTok", href: "https://tiktok.com" },
 ];
 
@@ -50,18 +48,6 @@ function SocialIcon({ name }: { name: string }) {
       return (
         <svg viewBox="0 0 24 24" fill="currentColor" className={cls} aria-hidden>
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-        </svg>
-      );
-    case "Pinterest":
-      return (
-        <svg viewBox="0 0 24 24" fill="currentColor" className={cls} aria-hidden>
-          <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.194.6 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
-        </svg>
-      );
-    case "YouTube":
-      return (
-        <svg viewBox="0 0 24 24" fill="currentColor" className={cls} aria-hidden>
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
         </svg>
       );
     case "TikTok":
@@ -197,28 +183,28 @@ export function Footer() {
             <li className="flex gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#ee4291]" />
               <address className="not-italic leading-relaxed">
-                ANOVA Flagship
+                ANOVA Beauty
                 <br />
-                2847 Melrose Avenue
+                901 E South St, Unit 130
                 <br />
-                Los Angeles, CA 90029
+                Anaheim, CA 92805
                 <br />
                 United States
               </address>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-4 w-4 shrink-0 text-[#ee4291]" />
-              <a href="tel:+13235550142" className="transition hover:text-white">
-                +1 (323) 555-0142
+              <a href="tel:+14452512578" className="transition hover:text-white">
+                (445) 251-2578
               </a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="h-4 w-4 shrink-0 text-[#ee4291]" />
               <a
-                href="mailto:hello@anova.com"
+                href="mailto:hanna@anovabeauty.com"
                 className="transition hover:text-white"
               >
-                hello@anova.com
+                hanna@anovabeauty.com
               </a>
             </li>
             <li className="flex items-start gap-3">
